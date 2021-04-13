@@ -55,7 +55,7 @@ function buildCharts(sample) {
   function buildMetadata(sample) {
     d3.json("samples.json").then((data) => {
       var metaData= data.metaData;
-      var resultsArray= metadata.filter(sampleobject => sampleobject.id == sample);
+      var resultsArray= metadata.filter(sampleObj => sampleObj.id == sample);
       var result= resultsArray[0]
       var panel = d3.select("#sample-metadata");
       panel.html("");
